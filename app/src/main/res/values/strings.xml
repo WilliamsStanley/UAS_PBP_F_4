@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">UAS_PBP_F_Kelompok_4</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="alamat">Alamat</string>
+    <string name="password">Password</string>
+    <string name="login">LOG IN</string>
+    <string name="clear">Clear Field</string>
+    <string name="pinjam">Pinjam</string>
+    <string name="books">Books</string>
+    <string name="account">Account</string>
+    <string name="myBooks">My Books</string>
+    <string name="logout">Log Out</string>
+    <string name="id">ID</string>
+    <string name="kembalikan">Kembalikan</string>
+    <string name="isbn">ISBN</string>
+    <string name="nama_buku">Nama Buku</string>
+    <string name="genre">Genre</string>
+    <string name="loading_text">Loading...</string>
+</resources>

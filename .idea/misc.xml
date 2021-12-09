@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_edit_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_login.xml" value="0.2957427536231884" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_qrscanner.xml" value="0.36666666666666664" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_recyler_view_adapter.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/fragment_account.xml" value="0.2957427536231884" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/fragment_mybooks.xml" value="0.28940217391304346" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/fragment_tampil_data_buku.xml" value="0.28940217391304346" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/layout_loading.xml" value="0.24818840579710144" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/layout/mybooks.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kuliah/Semester 5/Pemrograman Berbasis Platform F/UAS/UAS_PBP_F_4/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
