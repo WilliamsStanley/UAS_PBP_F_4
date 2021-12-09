@@ -28,13 +28,11 @@ public class QRScannerActivity extends AppCompatActivity {
     private CodeScanner codeScanner;
 
     private ActivityResultLauncher<String> requestPermissionLauncher =
-            registerForActivityResult(new
-                    ActivityResultContracts.RequestPermission(), isGranted -> {
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) {
                     setupScanner();
                 } else {
-                    Toast.makeText(this, "Butuh Izin Akses Kamera",
-                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Butuh Izin Akses Kamera", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -42,7 +40,8 @@ public class QRScannerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityQrscannerBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_qrscanner);
+        setContentView(binding.getRoot());
+
         setupPermission();
     }
 
@@ -56,14 +55,14 @@ public class QRScannerActivity extends AppCompatActivity {
             showDialogOK("Camera Services Permission required for this app",
                     new DialogInterface.OnClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(DialogInterface dialog, int which)
+                        {
                             switch (which) {
                                 case DialogInterface.BUTTON_POSITIVE:
                                     Intent intent = new Intent();
 
                                     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                                    Uri uri = Uri.fromParts("package",
-                                            getPackageName(), null);
+                                    Uri uri = Uri.fromParts("package", getPackageName(), null);
                                     intent.setData(uri);
                                     startActivity(intent);
                                     break;
@@ -74,13 +73,11 @@ public class QRScannerActivity extends AppCompatActivity {
                         }
                     });
         } else {
-            requestPermissionLauncher.launch(
-                    Manifest.permission.CAMERA);
+            requestPermissionLauncher.launch(Manifest.permission.CAMERA);
         }
     }
 
     private void setupScanner() {
-        Toast.makeText(this, "TESTTTTTTTTTTTTT", Toast.LENGTH_SHORT).show();
         codeScanner = new CodeScanner(this, binding.scannerView);
         codeScanner.setCamera(CodeScanner.CAMERA_BACK);
         codeScanner.setFormats(CodeScanner.ALL_FORMATS);
@@ -88,22 +85,22 @@ public class QRScannerActivity extends AppCompatActivity {
         codeScanner.setScanMode(ScanMode.CONTINUOUS);
         codeScanner.setAutoFocusEnabled(true);
         codeScanner.setFlashEnabled(false);
+
         codeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull Result result) {
                 Intent intent = new Intent();
+
                 intent.putExtra("QR_RESULT", result.toString());
                 setResult(RESULT_OK, intent);
                 finish();
             }
         });
-        binding.scannerView.setOnClickListener(v -> {
-            codeScanner.startPreview();
-        });
+
+        binding.scannerView.setOnClickListener(v -> { codeScanner.startPreview(); });
     }
 
-    private void showDialogOK(String message, DialogInterface.OnClickListener
-            okListener) {
+    private void showDialogOK(String message, DialogInterface.OnClickListener okListener) {
         new AlertDialog.Builder(this)
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)

@@ -63,12 +63,15 @@ public class Register extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(username)) {
                     etUsername.setError("Username is required");
+                    Toast.makeText(getApplicationContext(), "Username is required", Toast.LENGTH_SHORT).show();
                     return;
                 } else if (TextUtils.isEmpty(email)) {
                     etEmail.setError("Email is required");
+                    Toast.makeText(getApplicationContext(), "Email is required", Toast.LENGTH_SHORT).show();
                     return;
                 } else if (TextUtils.isEmpty(password)) {
                     etPassword.setError("Password is required");
+                    Toast.makeText(getApplicationContext(), "Password is required", Toast.LENGTH_SHORT).show();
                     return;
                 } else {
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
