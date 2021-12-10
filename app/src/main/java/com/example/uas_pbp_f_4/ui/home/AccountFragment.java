@@ -90,9 +90,11 @@ public class AccountFragment extends Fragment {
         documentReference.addSnapshotListener(getActivity(), new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                tvID.setText(userId);
-                tvUsername.setText(value.getString("Username"));
-                tvEmail.setText(value.getString("Email"));
+                if(value!=null) {
+                    tvID.setText(userId);
+                    tvUsername.setText(value.getString("Username"));
+                    tvEmail.setText(value.getString("Email"));
+                }
             }
         });
 
